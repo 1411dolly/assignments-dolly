@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TTN form</title>
+    <link rel="stylesheet" type="text/css" href="form.css" />
+</head>
+<body>
+    <div>
+        <div>
+            <h1>TO THE NEW</h1>
+            <a href="#">Home</a>
+            <a href="#">Quick Help</a>
+        </div>
+        <hr>
+        <div>
+            <div id="mkform">
+                <form>
+                    <div   id="top">
+                        <h2>BUG REPORT</h2>
+                    </div>
+                    <hr>
+                    <div id="middle">
+                        <div >
+                            Title:*
+                            <br>
+                            <input id="title" type="text" name="title" required>
+                        </div>
+                        <div class="content">
+                            Description:*
+                            <br>
+                            <textarea required></textarea>
+                        </div>
+                        <div class="content">
+                            Operating System:
+                            <br>
+                            <select class="menu">
+                                <option value="Windows XP">Windows XP</option>
+                                <option value="Unix">Unix</option>
+                                <option value="Ubuntu">Ubuntu</option>
+                                <option value="MS DOS">MS Dos</option>
+                                <option value="Windows" selected>Windows 10</option>
+                            </select>
+                        </div>
+                        <div class="content">
+                            Product:*
+                            <br>
+                            <select class="menu">
+                                <option value="Windows XP" selected>Windows XP</option>
+                                <option value="Unix">Unix</option>
+                                <option value="Ubuntu">Ubuntu</option>
+                                <option value="MS DOS" >MS Dos</option>
+                                <option value="Windows" >Windows 10</option>
+                            </select>
+                        </div>
+                        <div class="content" id="version">
+                            Version:*
+                            <br>
+                            <input type="text" name="title" required>
+                        </div>
+                        <div class="content">
+                            License:<br>
+                           <div id="block1"> <input type="radio" name="license" value="free"> Free</div>
+                           <div id="block2"> <input type="radio" name="license" value="business"> Business</div>
+
+                        </div>
+                        <div class="content">
+                            Severity:*
+                            <br>
+                            <select class="menu">
+                                <option value="Critical" selected>Critical</option>
+                                <option value="High">High</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Low" >Low</option>
+                            </select>
+                        </div>
+                        <div class="content">
+                            <input type="file" id="myFile">
+                        </div>
+                    </div>
+                    <hr>
+                    <div id="last">
+                        <button id="send">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

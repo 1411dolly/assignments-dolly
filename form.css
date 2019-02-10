@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    margin:0 2% 0 2%;
+}
+#container{}
+hr{
+    margin:0;
+}
+h1{
+    display: inline-block;
+    color: #34BC99;
+    margin: 10px 0 10px 0;
+    font-family: sans-serif;
+}
+h2{
+    color: white;
+    font-family: sans-serif;
+}
+a{
+    float: right;
+    margin-top:15px;
+    color: #34BC99;
+    text-decoration: unset;
+}
+#mkform{
+    background-color: #BDC3C7;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 50%;
+    border: 3px solid #C8CDD4;
+    clear: both;
+}
+#mkform #top{
+    padding: 15px 0 10px 0;
+    font-color:white;
+
+}
+#mkform #middle{
+    background-color: white;
+    height: auto;
+    padding: 10px 4% 0 4%;
+    margin: 0;
+    color: #454749;
+}
+#mkform #last{
+    background-color:#C8CDD4;
+    margin: 0px;
+    display: flow-root;
+}
+
+#mkform #middle #title{
+    border: 1px solid #C8CDD4 ;
+    height: 25px;
+    border-radius:5px;
+    margin: 0px;
+    width:100%
+}
+textarea{
+    border: 1px solid #C8CDD4 ;
+    height: 75px;
+    border-radius:5px;
+    margin: 0px;
+    width:100%;
+}
+#mkform #middle .content{
+    padding-top: 10px;
+}
+#mkform #middle .menu{
+    margin: 0;
+    height: 25px;
+    background-color: #34BC99;
+    margin-top: 5px;
+    color: white;
+    width: 100%;
+    border-radius:5px;
+}
+#mkform #middle #version{
+    width:25%;
+}
+#block1{
+    display: contents;
+    float: left;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+#block2{
+    display: inline-block;
+    float: right;
+    margin: 0;
+    padding: 0;
+    width:50%;
+}
+input{
+    margin: 0;
+    padding: 0;
+}
+input .field{
+    position: relative;
+}
+#mkform #middle #myFile{
+    color: #34BC99;
+    height: 25px;
+    border-radius: 5px;
+    width: 100%;
+}
+#send{
+    float: right;
+    margin: 20px;
+    background-color:#34BC99;
+    color:white ;
+    padding: 5px;
+    border-radius: 5px;
+}
+form{
+    margin: 0;
+    padding: 0;
+}
