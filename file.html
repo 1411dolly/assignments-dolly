@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script
+            type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="file.js"></script>
+    <style>
+        .class1{
+            background-color: aquamarine;
+        }
+        table,th,td{
+            border: 1px solid black;
+        }
+        .slider{
+
+            width: 50%;
+            height: 300px;
+            margin: 0 auto;
+
+            border: 2px solid black;
+
+        }
+    </style>
+</head>
+
+<body>
+<div>Q1.Console "Hello Word" in document.ready function</div><hr>
+<div>Q2.Select a ID name "#test" and add class "load" when DOM is loaded</div>
+<p id="test">Paragraph</p>
+<button id="button1">add class load id</button>
+<hr><div>Q3.Change the color of element which class name end with "-new"</div>
+<div class="anew">Hello Dolly</div>
+<div class="newa">Hello Amarjeet</div>
+<div class="bnew">Hello Pallavi</div>
+<div class="cnew">Hello Anuja</div>
+<button id="button2">class name end with "-new"</button><br>
+<hr><div>Q4.Disable submit button using jquery attr method</div>
+<button id="button3">disable on click"</button>
+<hr><div>Q5.Change the font size of ".target" which has parent element with id name "#main"</div>
+<div id="main">
+    <p class="target">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    <p class="newa">It is a long established fact that a reader will be distracted by the readable . </p>
+    <p class="target1">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum </p>
+</div>
+<button id="button4">"Change the font size of ".target""</button>
+<hr><div>Q6.After page load change the HTML of div element with "p" element</div>
+<div id="page1">There are many variations of passages of Lorem Ipsum available</div>
+<p id="page2">But the majority have suffered alteration in some form, by injected humour.</p>
+<hr><div>Q7.Bind a click function to an "click" element and append next "click" next to it</div>
+<div>Q8.Click event not working on element which added dynamicly or via script, make it work using .on method</div>
+<div class="parent">
+    <button class="clicks" >Click Me</button>
+</div>
+<hr><div>Q9.Get dropdown selected value on onchanage event and append in div container</div>
+<div>
+    <select id="pick">
+        <option value="">Select one...</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+</div>
+<div id="div1"></div>
+<hr><div>Q10.Create a dropdown menu using hover method in jquery</div>
+<div id="menu">
+    <ul>
+        <li><a href="#">Link</a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Dropdown Link</a></li>
+                <li><a href="#">Another Dropdown Link</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<hr><div>Q11.On clicking on "google" tag. It is taking us to google home page. Stop it from happening.</div>
+<a id="google" href="www.google.com">
+    google
+</a>
+<hr><div>Q12.We have bind a click funtion to parent div but we want stop it from performing when user clicks on its child li</div>
+<div>
+    <button id="parentclick">parent button</button>
+    <div>
+        <ul>
+            <li><button class="childclick">child li</button></li>
+            <li><button class="childclick">child li</button></li>
+            <li><button class="childclick">child li</button></li>
+            <li><button class="childclick">child li</button></li>
+        </ul>
+    </div>
+</div>
+<hr><div>Q13.Get the max height of elements using jquery each method</div>
+<div class="height" style="height: 10px">
+    div of height 10
+</div>
+<div class="height" style="height: 20px">
+    div of height 20
+</div>
+<div class="height" style="height: 30px">
+    div of height 30
+</div>
+<div class="height" style="height: 40px">
+    div of height 40
+</div>
+<div class="height" style="height: 50px">
+    div of height 50
+</div>
+<label id="maxheight">max height is</label>
+<hr><div>Q14.Change color of every cell which has numberl larger than 10.</div>
+<table id="qw">
+    <tr>
+        <th>Employee Id</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Number</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Dolly</td>
+        <td>1000</td>
+        <td class="num">12</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Dolly2</td>
+        <td>2000</td>
+        <td class="num">9</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Dolly3</td>
+        <td>3000</td>
+        <td class="num">10</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Dolly4</td>
+        <td>4000</td>
+        <td class="num">14</td>
+    </tr>
+</table>
+<button id="colorchange">Change Color</button>
+<hr><div>Q15.Retrive the data from server using ajax get call</div>
+<br>
+<button id="dolly">ajax calll</button>
+<div id="url" style="height:100px;overflow: auto"></div>
+
+<hr><div>Q16.Add cross button on row and bind click function which make a delete request to server, after success event remove the row from dom</div>
+<table id="records_table" border='1'>
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Body</th>
+    </tr>
+</table>
+
+<hr><div>Q17.Create a image array and in div create a slide show to animate images of delay of 500ms.</div>
+<div class="">
+    <img class="slider" alt="">
+</div>
+<button id="animate">Animate</button>
+
+</body>
+</html>
