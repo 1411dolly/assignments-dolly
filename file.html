@@ -149,12 +149,31 @@
 <div id="url" style="height:100px;overflow: auto"></div>
 
 <hr><div>Q16.Add cross button on row and bind click function which make a delete request to server, after success event remove the row from dom</div>
-<table id="records_table" border='1'>
+<table>
+    <thead>
     <tr>
-        <th>Id</th>
-        <th>Title</th>
-        <th>Body</th>
+        <th>Select</th>
+        <th>Name</th>
+        <th>Email</th>
     </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Dolly</td>
+        <td>dolly@gmail.com</td>
+        <td><button type="button" id="delete-row1">Delete Row</button></td>
+    </tr>
+    <tr>
+        <td>Amarjeet</td>
+        <td>amarjeet@gmail.com</td>
+        <td><button type="button" id="delete-row2">Delete Row</button></td>
+    </tr>
+    <tr>
+        <td>person1</td>
+        <td>person1@gmail.com</td>
+        <td><button type="button" id="delete-row3">Delete Row</button></td>
+    </tr>
+    </tbody>
 </table>
 
 <hr><div>Q17.Create a image array and in div create a slide show to animate images of delay of 500ms.</div>
