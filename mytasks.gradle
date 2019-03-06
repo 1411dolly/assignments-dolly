@@ -1,0 +1,6 @@
+task task1 {
+    println "task1 from mytasks.gradlele"
+}
+task task2 {
+    println "task2 from mytasksks.gradle"
+}
