@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--Q1...Create a class Database with 2 instance variables port and name.
+    Configure Database class bean in spring container through Spring XML.
+    Initialize instance variables using setter method.-->
+    <bean id="database" class="com.example.SpringAssignment.Database" >
+        <!--<constructor-arg name="name" value="DatabaseConstructorExample"></constructor-arg>-->
+        <!--<constructor-arg name="port" value="DatabaseConstructorPort"></constructor-arg>-->
+        <property name="name" value="DatabaseExample"/>
+        <property name="port" value="DatabasePort"/>
+    </bean>
+
+
+
+    <!--Q3...create a bean with the name teaRestaurant of type Restaurant which inject
+    Tea object as dependency using setter method.-->
+    <!--<bean id="teaRestaurant" class="com.example.SpringAssignment.Restaurant">-->
+        <!--<property name="hotDrink">-->
+            <!--<bean class="com.example.SpringAssignment.Tea"></bean>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+
+    <!--Q4...Get both the beans and invoke prepareHotDrink method via hotDrink-->
+    <!--instance variables. Try inner bean with expressTeaRestaurant.-->
+    <!--<bean id="coffeeRestaurant" class="com.example.SpringAssignment.Restaurant">-->
+        <!--<property name="hotDrink">-->
+            <!--<bean class="com.example.SpringAssignment.ExpressTea"></bean>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+
+    <!--Q5...Create Class Complex as follows: class complex {    List list;-->
+    <!--Set set;-->
+    <!--Map map;-->
+    <!--} Initialize all the instance variables of the complex class using Spring XML. Give bean name as-->
+    <!--complexBean. Get the bean and display the properties.-->
+    <bean name="complexBean" class="com.example.SpringAssignment.Complex">
+        <property name="list">
+            <list>
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+            </list>
+        </property>
+        <property name="set">
+            <set>
+                <value>set1</value>
+                <value>set2</value>
+                <value>set3</value>
+            </set>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="1" value="one"/>
+                <entry key="2" value="two"/>
+                <entry key="3" value="three"/>
+            </map>
+        </property>
+    </bean>
+
+
+    <!--Q6...Autowire hotDrink in Restaurant with tea bean byName, byType and constructor.-->
+    <!--<bean id="hotDrink" class="com.example.SpringAssignment.Tea"/>-->
+    <!--<bean id="HotDrinkexpressTea" class="com.example.SpringAssignment.ExpressTea"/>-->
+    <!--<bean id="Restaurant" class="com.example.SpringAssignment.Restaurant" autowire="byType"></bean>-->
+    <!--<bean id="Restaurant" class="com.example.SpringAssignment.Restaurant" autowire="constructor">-->
+        <!--<constructor-arg ref="hotDrink"></constructor-arg>-->
+    <!--</bean>-->
+
+    <!--Q7...Set the scope of the teaRestaurant bean as proptotype and check the scope type after accessing the bean.-->
+    <!--<bean id="teaRestaurant" class="com.example.SpringAssignment.Restaurant" scope="prototype">-->
+    <!--<property name="hotDrink">-->
+    <!--<bean class="com.example.SpringAssignment.Tea"></bean>-->
+    <!--</property>-->
+    <!--</bean>-->
+
+
+</beans>

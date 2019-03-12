@@ -1,2 +1,6 @@
-rootProject.name = 'spock-demo'
-
+pluginManagement {
+	repositories {
+		gradlePluginPortal()
+	}
+}
+rootProject.name = 'SpringAssignment'
