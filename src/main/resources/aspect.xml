@@ -12,8 +12,17 @@
         ">
         <aop:aspectj-autoproxy/>
 
-        <bean id="dummy" class="aspect.Dummy"/>
-        <bean id="aspect" class="aspect.MyAspect"/>
+        <!--<bean id="dummy" class="aspect.Dummy"/>-->
+        <!--<bean id="aspect" class="aspect.MyAspect"/>-->
+
+        <!--<bean id="service" class="Q4Q5Q6loggingAspect.Service"/>-->
+        <!--<bean id="aspectexample" class="Q4Q5Q6loggingAspect.AspectExample"/>-->
+
+        <!--<bean id="service" class="Q7PointCutExpression.Service"/>-->
+        <!--<bean id="aspect" class="Q7PointCutExpression.Aspect"/>-->
+
+        <bean id="service" class="Q8Q9PointCutReuse.Service"/>
+        <bean id="aspect" class="Q8Q9PointCutReuse.Aspect"/>
 
 </beans>
 
