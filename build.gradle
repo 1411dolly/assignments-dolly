@@ -1,23 +1,44 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.bmuschko:gradle-tomcat-plugin:2.2.2'
+    }
+}
 plugins {
     id 'java'
 }
 
-group 'spring-trans-demo'
+apply plugin: 'war'
+apply plugin:'java'
+apply plugin: 'com.bmuschko.tomcat'
+
+group 'SpringMVC'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
-    compile group: 'org.springframework', name: 'spring-context', version: '5.1.5.RELEASE'
-    compile group: 'org.springframework', name: 'spring-core', version: '5.1.5.RELEASE'
-    compile group: 'org.springframework', name: 'spring-jdbc', version: '5.1.5.RELEASE'
-    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.6'
-    compile group: 'org.springframework', name: 'spring-tx', version: '5.1.5.RELEASE'
-    compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.1'
-    compile group: 'org.hibernate', name: 'hibernate-core', version: '5.4.1.Final'
-    compile group: 'org.springframework', name: 'spring-orm', version: '4.0.3.RELEASE'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    providedCompile 'javax.servlet:servlet-api:2.5', 'javax.servlet:jsp-api:2.0'
+    compile 'org.springframework:spring-webmvc:4.2.5.RELEASE'
+    def tomcatVersion = '7.0.57'
+    tomcat "org.apache.tomcat.embed:tomcat-embed-core:${tomcatVersion}",
+            "org.apache.tomcat.embed:tomcat-embed-logging-juli:${tomcatVersion}",
+            "org.apache.tomcat.embed:tomcat-embed-jasper:${tomcatVersion}"
+
+}
+
+tomcatRun {
+    contextPath = ""
+    httpPort = 8080
+    File file = new File("src/main/webapp/WEB-INF/web.xml");
+    configFile = file
 }
