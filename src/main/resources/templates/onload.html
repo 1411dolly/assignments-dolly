@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        #cover {
+            background: url("http://www.aveva.com/Images/ajax-loader.gif") no-repeat scroll center center #FFF;
+            position: absolute;
+            display: none;
+            height: 100%;
+            width: 100%;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+EMPLOYEE REGISTRATION
+<form id="ajaxform">
+    NAME::<input type="text" name="name" >
+    EMAIL::<input type="text" name="email">
+    PASSWORD::<input type="text" name="password">
+    <br>
+    <input type="submit" value="submit" id="button">
+</form>
+
+
+<div id="returned_data"></div>
+<div id="cover" ></div>
+<div style="position: absolute" th:include="applicationTemplate::footer"></div>
+<script>
+    $(document).ready(
+        function () {
+            $("form#ajaxform").submit(function (e) {
+                e.preventDefault();
+                $("#cover").css("display","block");
+                $.ajax({
+                    url:'/ajaxloader',
+                    method:'post',
+                    success:function(data){
+                        console.log(data);
+                        $("#cover").css("display","none");
+                        $("#returned_data").html(data);
+                    }
+                });
+            });
+
+
+        }
+    )
+</script>
+</body>
+</html>

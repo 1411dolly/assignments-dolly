@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Thymeleaf</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script th:src="@{'/javascript/hello.js'}"></script>
+    <link  th:href="@{/css/hello.css}" rel="stylesheet" />
+
+</head>
+<body>
+Hello Thymeleaf!
+<p th:text="${dolly}">list</p>
+<button id="button">hello</button>
+</body>
+</html>

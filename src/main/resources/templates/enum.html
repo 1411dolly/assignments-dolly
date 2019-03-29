@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th="http://www.thymeleaf.org">
+<head th:include="applicationTemplate::head">
+    <style>
+        .odd{
+            color:red;
+        }
+    </style>
+</head>
+<table >
+    <thead>
+    <td>name</td>
+    <td>email</td>
+    <td>password</td>
+    <td>Admin?</td>
+    </thead>
+    <th:block th:each="user,i : ${enumlist}">
+        <tr th:class="${i.even}?'odd'">
+            <td th:text="*{user.name}">...</td>
+            <td th:text="*{user.email}">...</td>
+            <td th:text="*{user.password}">...</td>
+            <td th:text="*{user.person}">Hello Admin</td>
+        </tr>
+    </th:block>
+</table>
+
+</body>
+</html>
